@@ -39,7 +39,7 @@ bool search(node* root, int key)
         search(root->right, key);
     else if (root->data > key)
         search(root->left, key);
-    else
+
         return false;
 }
 // depth first search
@@ -54,9 +54,9 @@ void printDFS(node *root)
     // we can make this inorder or postorder traversal just based on the sequence of the above 3 lines
     //  Fun fact: inoder gives us the BST in a sorted fashion
 }
-// breadth first search
 void printLevelOrder(node *root)
 { 
+// breadth first search (BFS)
     queue<node *> q;
     if (root == NULL)
         cout << "-1";
@@ -72,6 +72,7 @@ void printLevelOrder(node *root)
         q.pop();
     }
 }
+
 //Min value in the BST
 int findMin(node *root)
 { // we can also do this through recursion
